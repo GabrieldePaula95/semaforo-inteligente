@@ -1,0 +1,5 @@
+com\smartcity\semaforo\Controller\SemaforoController.class
+com\smartcity\semaforo\service\SemaforoService.class
+com\smartcity\semaforo\repository\SemaforoRepository.class
+com\smartcity\semaforo\SemaforoInteligenteApplication.class
+com\smartcity\semaforo\model\Semaforo.class
