@@ -35,4 +35,10 @@ public class AlertaService {
     public void deletarAlerta(String id) {
         alertaRepository.deleteById(id);
     }
+
+    //atualizar um alerta
+    public Alerta atualizarAlerta(String id, Alerta alerta) {
+        alerta.setId(id);
+        return alertaRepository.save(alerta);
+    }
 }

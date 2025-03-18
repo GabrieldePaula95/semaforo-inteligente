@@ -1,4 +1,4 @@
-package com.smartcity.semaforo.controller;
+package com.smartcity.semaforo.Controller;
 
 import com.smartcity.semaforo.model.GestorTrafego;
 import com.smartcity.semaforo.service.GestorTrafegoService;
@@ -19,6 +19,12 @@ public class GestorTrafegoController {
     @PostMapping
     public GestorTrafego criarGestorTrafego(@RequestBody GestorTrafego gestorTrafego) {
         return gestorTrafegoService.criarGestorTrafego(gestorTrafego);
+    }
+
+    // Atualizar Gestor de Tráfego por ID
+    @PutMapping("/{id}")
+    public GestorTrafego atualizarGestorTrafego(@PathVariable String id, @RequestBody GestorTrafego gestorTrafego) {
+        return gestorTrafegoService.atualizarGestorTrafego(id, gestorTrafego);
     }
 
     // Buscar todos os Gestores de Tráfego

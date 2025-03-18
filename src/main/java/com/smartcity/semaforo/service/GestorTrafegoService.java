@@ -33,4 +33,10 @@ public class GestorTrafegoService {
     public void deletarGestorTrafego(String id) {
         gestorTrafegoRepository.deleteById(id);
     }
+
+    //atualizar um Gestor de Tráfego
+    public GestorTrafego atualizarGestorTrafego(String id, GestorTrafego gestorTrafego) {
+        gestorTrafego.setId(id);
+        return gestorTrafegoRepository.save(gestorTrafego);
+    }
 }

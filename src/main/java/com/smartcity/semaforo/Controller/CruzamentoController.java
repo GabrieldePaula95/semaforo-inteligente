@@ -21,6 +21,12 @@ public class CruzamentoController {
         return cruzamentoService.criarCruzamento(cruzamento);
     }
 
+    // Atualizar cruzamento por ID
+    @PutMapping("/{id}")
+    public Cruzamento atualizarCruzamento(@PathVariable String id, @RequestBody Cruzamento cruzamento) {
+        return cruzamentoService.atualizarCruzamento(id, cruzamento);
+    }
+
     // Buscar todos os cruzamentos
     @GetMapping
     public List<Cruzamento> listarCruzamentos() {

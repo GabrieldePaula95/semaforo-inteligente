@@ -33,4 +33,10 @@ public class CruzamentoService {
     public void deletarCruzamento(String id) {
         cruzamentoRepository.deleteById(id);
     }
+
+    //atualizar um cruzamento
+    public Cruzamento atualizarCruzamento(String id, Cruzamento cruzamento) {
+        cruzamento.setId(id);
+        return cruzamentoRepository.save(cruzamento);
+    }
 }

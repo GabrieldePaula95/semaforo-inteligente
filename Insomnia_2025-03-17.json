@@ -1,1 +1,568 @@
-{"_type":"export","__export_format":4,"__export_date":"2025-03-18T00:38:24.688Z","__export_source":"insomnia.desktop.app:v2023.5.7","resources":[{"_id":"req_4d70488fe60144f990fbf81c97cad385","parentId":"fld_1f59ff78164844759b14ba1a3a0496e7","modified":1742257497333,"created":1742256242404,"url":"localhost:8080/cruzamentos","name":"Create","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"id\": \"10\",\n\t\"nome\": \"Cruzamento J\",\n\t\"localizacao\": \"Avenida Brigadeiro Luis Antonio x Rua da Consolação, São Paulo - SP\",\n\t\"vias\": 4,\n\t\"estadoSemaforo\": \"verde\",\n\t\"nroVeiculosDetectados\": 60,\n\t\"dataCadastro\": \"2025-03-10T09:30:00\",\n\t\"horaUltimaAtualizacao\": \"2025-03-10T10:30:00\",\n\t\"sensores\": \"Sensor19, Sensor20\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742256242404,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_1f59ff78164844759b14ba1a3a0496e7","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742256239130,"created":1742256239130,"name":"Cruzamentos","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1742256239130,"_type":"request_group"},{"_id":"wrk_54863031fb2d4d5fbc060c5e9119bef2","parentId":null,"modified":1742249949541,"created":1742249949541,"name":"Controle Semaforos","description":"","scope":"collection","_type":"workspace"},{"_id":"req_17a170fccfb14f038705c8f2672e3718","parentId":"fld_1f59ff78164844759b14ba1a3a0496e7","modified":1742257783404,"created":1742257748722,"url":"localhost:8080/cruzamentos/10","name":"Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742256242304,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b4a76aca3e5f44929a6449d651075cd0","parentId":"fld_cf6164aff5844efb97f9928000268492","modified":1742257482048,"created":1742255647341,"url":"localhost:8080/gestor_trafego","name":"Create","description":"","method":"POST","body":{"mimeType":"application/json","text":" {\n\t\t\"id\": \"10\",\n\t\t\"nome\": \"Roberta Martins\",\n\t\t\"ramal\": \"4455\",\n\t\t\"dataCadastro\": \"2025-03-10T19:00:00\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742255647341,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_cf6164aff5844efb97f9928000268492","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742255640624,"created":1742255640624,"name":"Gestor Trafego","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1742255640624,"_type":"request_group"},{"_id":"req_1b3b36bfa1554567b91ecfeedf39642c","parentId":"fld_cf6164aff5844efb97f9928000268492","modified":1742257830771,"created":1742257798691,"url":"localhost:8080/gestor_trafego/10","name":"Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742255647241,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d0959a88a263420abab852dbae75c6d9","parentId":"fld_4951410ea5f04669b7284f44bb7f8978","modified":1742255018290,"created":1742254683662,"url":"localhost:8080/semaforos/sensores","name":"Create","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"codigoSerie\":\"92U5H1SYKC\",\n  \"ultimaManutencao\": \"2025-03-17T20:36:32.8361092\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742254683662,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_4951410ea5f04669b7284f44bb7f8978","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742254477594,"created":1742254477594,"name":"Sensor","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1742254477594,"_type":"request_group"},{"_id":"req_145801fec75844ceb7e90f3747361157","parentId":"fld_4b74a4ed454c4d7fa1fff64a03bdbcbd","modified":1742254694025,"created":1742252425350,"url":"localhost:8080/semaforos/alertas","name":"Create","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"message\":\"Conduta irregular detectada: veículo avançou o sinal vermelho teste.\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742252425350,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_4b74a4ed454c4d7fa1fff64a03bdbcbd","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742252422012,"created":1742252422012,"name":"Alertas","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1742252422012,"_type":"request_group"},{"_id":"req_d5e36375095e4c2aa544616a46905666","parentId":"fld_4b74a4ed454c4d7fa1fff64a03bdbcbd","modified":1742255028847,"created":1742254599268,"url":"localhost:8080/semaforos/alertas/67d8b2000ed5445ee028cbe9","name":"Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742252425250,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_048a828b51514343b6debeebd236d5a9","parentId":"fld_7e5e33961ecd4170a05bfaefa7c710a4","modified":1742254025948,"created":1742249966412,"url":"localhost:8080/semaforos","name":"Create","description":"","method":"POST","body":{"mimeType":"application/json","text":"  {\n    \"id\": \"10\",\n    \"localizacao\": \"R. Siqueira Campos, 500 - Santa Teresinha, Santo André - SP, 09740-550\",\n    \"veiculoPresente\": false,\n    \"tempoVerde\": 45\n  }"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742249966412,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_7e5e33961ecd4170a05bfaefa7c710a4","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742249963330,"created":1742249963330,"name":"Semaforos","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1742249963330,"_type":"request_group"},{"_id":"req_63efe525788942ff836339522030d6b0","parentId":"fld_7e5e33961ecd4170a05bfaefa7c710a4","modified":1742250805426,"created":1742250737515,"url":"localhost:8080/semaforos","name":"Read","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742249966312,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_969f0fbedd3d436f9cb4da0ed4fcb79f","parentId":"fld_7e5e33961ecd4170a05bfaefa7c710a4","modified":1742251034385,"created":1742250811432,"url":"localhost:8080/semaforos/4","name":"Update","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\t\n\t\"id\": \"4\",\n\t\"localizacao\": \"Rua da Glória, 322 - PiraporinhaDiadema - SP, 09950-800\",\n\t\"veiculoPresente\": false,\n\t\"tempoVerde\": 25\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742249966212,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_d861f6a48aad48129eadb8bd152f4457","parentId":"fld_7e5e33961ecd4170a05bfaefa7c710a4","modified":1742253706533,"created":1742253652712,"url":"localhost:8080/semaforos/5","name":"Delete","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1742249966112,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_d5afb5df5cb50774fb98e2adc935ed77bb91d77a","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742249949552,"created":1742249949552,"name":"Base Environment","data":{},"dataPropertyOrder":null,"color":null,"isPrivate":false,"metaSortKey":1742249949552,"_type":"environment"},{"_id":"jar_d5afb5df5cb50774fb98e2adc935ed77bb91d77a","parentId":"wrk_54863031fb2d4d5fbc060c5e9119bef2","modified":1742249949555,"created":1742249949555,"name":"Default Jar","cookies":[],"_type":"cookie_jar"}]}
+type: collection.insomnia.rest/5.0
+name: Controle Semaforos
+meta:
+  id: wrk_db4fe273dd1948c1821a84c7eadb295e
+  created: 1742297993316
+  modified: 1742297993316
+collection:
+  - name: Semaforos
+    meta:
+      id: fld_5352c1046c104a5fa93dbd5dacb4dbea
+      created: 1742249963330
+      modified: 1742249963330
+      sortKey: -1742249963330
+    children:
+      - url: localhost:8080/semaforos
+        name: Create
+        meta:
+          id: req_8bbf30e3ae684c51941e44d642a72dda
+          created: 1742249966412
+          modified: 1742254025948
+          isPrivate: false
+          sortKey: -1742249966412
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-2
+              {
+                "id": "10",
+                "localizacao": "R. Siqueira Campos, 500 - Santa Teresinha, Santo André - SP, 09740-550",
+                "veiculoPresente": false,
+                "tempoVerde": 45
+              }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos
+        name: Read
+        meta:
+          id: req_261b62523c11489cb67b0ae4e8d738c6
+          created: 1742250737515
+          modified: 1742250805426
+          isPrivate: false
+          sortKey: -1742249966312
+        method: GET
+        headers:
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/4
+        name: Update
+        meta:
+          id: req_9fddccb56a254bd48863e64f62171aba
+          created: 1742250811432
+          modified: 1742251034385
+          isPrivate: false
+          sortKey: -1742249966212
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {	
+            	"id": "4",
+            	"localizacao": "Rua da Glória, 322 - PiraporinhaDiadema - SP, 09950-800",
+            	"veiculoPresente": false,
+            	"tempoVerde": 25
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/5
+        name: Delete
+        meta:
+          id: req_1d5928cb1c874918aa7e07a16e31846a
+          created: 1742253652712
+          modified: 1742253706533
+          isPrivate: false
+          sortKey: -1742249966112
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Alertas
+    meta:
+      id: fld_c67e890b041a48149986a5164e34e326
+      created: 1742252422012
+      modified: 1742252422012
+      sortKey: -1742252422012
+    children:
+      - url: localhost:8080/semaforos/alertas
+        name: Create
+        meta:
+          id: req_7a82adee2c9940aa85a67041c3ca7cf3
+          created: 1742252425350
+          modified: 1742254694025
+          isPrivate: false
+          sortKey: -1742252425350
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"message":"Conduta irregular detectada: veículo avançou o sinal vermelho teste."
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/alertas/67d8b2000ed5445ee028cbe9
+        name: Delete
+        meta:
+          id: req_5e5ddd9e35504eca95b8047fa04f3152
+          created: 1742254599268
+          modified: 1742255028847
+          isPrivate: false
+          sortKey: -1742252425250
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/alertas
+        name: Read
+        meta:
+          id: req_911cbcd7b1b94deb9b6ab4153998daf8
+          created: 1742298433705
+          modified: 1742298464177
+          isPrivate: false
+          sortKey: -1742252425300
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/alertas/67d8ac531df78734991bc570
+        name: Update
+        meta:
+          id: req_c292917001a14318b59a92f1029eca6f
+          created: 1742298489119
+          modified: 1742298591392
+          isPrivate: false
+          sortKey: -1742252425275
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "67d8ac531df78734991bc570",
+            	"message": "Problemas com o semaforo!",
+            	"dataHora": "2025-03-17T20:12:19.521"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Sensor
+    meta:
+      id: fld_dd821d167f1640fdaeec640e0d320d81
+      created: 1742254477594
+      modified: 1742254477594
+      sortKey: -1742254477594
+    children:
+      - url: localhost:8080/semaforos/sensores
+        name: Create
+        meta:
+          id: req_843acc6929ad45d88b4e7bd5eb15c908
+          created: 1742254683662
+          modified: 1742255018290
+          isPrivate: false
+          sortKey: -1742254683662
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"codigoSerie":"92U5H1SYKC",
+              "ultimaManutencao": "2025-03-17T20:36:32.8361092"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/sensores/67d8b3990ed5445ee028cbf3
+        name: Delete
+        meta:
+          id: req_22e410975a404beca71dccbc2bfe3c0a
+          created: 1742299031515
+          modified: 1742299156641
+          isPrivate: false
+          sortKey: -1742254683562
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/sensores
+        name: Read
+        meta:
+          id: req_cdcd52a73e5a49ceb3648595de2235af
+          created: 1742299069078
+          modified: 1742299110188
+          isPrivate: false
+          sortKey: -1742254683612
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/semaforos/sensores/67d8b38f0ed5445ee028cbf2
+        name: Update
+        meta:
+          id: req_6a5177b98fb54ae394806121d36cc422
+          created: 1742299182047
+          modified: 1742299265239
+          isPrivate: false
+          sortKey: -1742254683587
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "67d8b38f0ed5445ee028cbf2",
+            	"codigoSerie": "AVAWQ1G04H",
+            	"ultimaManutencao": "2025-03-17"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Gestor Trafego
+    meta:
+      id: fld_853f5b85be404a75994b7c9f670cd139
+      created: 1742255640624
+      modified: 1742255640624
+      sortKey: -1742255640624
+    children:
+      - url: localhost:8080/gestor_trafego
+        name: Create
+        meta:
+          id: req_4b25e3ae1a844444adac1bfbc35eff16
+          created: 1742255647341
+          modified: 1742257482048
+          isPrivate: false
+          sortKey: -1742255647341
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-2
+             {
+            		"id": "10",
+            		"nome": "Roberta Martins",
+            		"ramal": "4455",
+            		"dataCadastro": "2025-03-10T19:00:00"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/gestor_trafego/10
+        name: Delete
+        meta:
+          id: req_e3b9e2b2235e4530be6f57310138b738
+          created: 1742257798691
+          modified: 1742257830771
+          isPrivate: false
+          sortKey: -1742255647241
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/gestor_trafego
+        name: Read
+        meta:
+          id: req_1b4f9d32a2bd419bb7d27479fd5190d8
+          created: 1742299297845
+          modified: 1742299324110
+          isPrivate: false
+          sortKey: -1742255647291
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/gestor_trafego/10
+        name: Update
+        meta:
+          id: req_243dcbc2eaff4d2081c5f709643fa143
+          created: 1742299346996
+          modified: 1742299578966
+          isPrivate: false
+          sortKey: -1742255647266
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-2
+             {
+            		"id": "10",
+            		"nome": "Roberta Martins",
+            		"ramal": "4455",
+            		"dataCadastro": "2025-03-10T19:00:00"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Cruzamentos
+    meta:
+      id: fld_07cadee5c3874d1780238141f3153f36
+      created: 1742256239130
+      modified: 1742256239130
+      sortKey: -1742256239130
+    children:
+      - url: localhost:8080/cruzamentos
+        name: Create
+        meta:
+          id: req_1b8081fe67924701b8e4770898289102
+          created: 1742256242404
+          modified: 1742298017311
+          isPrivate: false
+          sortKey: -1742256242404
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": "10",
+            	"nome": "Cruzamento J",
+            	"localizacao": "Avenida Brigadeiro Luis Antonio x Rua da Consolação, São Paulo - SP",
+            	"vias": 4,
+            	"estadoSemaforo": "verde",
+            	"nroVeiculosDetectados": 60,
+            	"dataCadastro": "2025-03-10T09:30:00",
+            	"horaUltimaAtualizacao": "2025-03-10T10:30:00",
+            	"sensores": "Sensor19, Sensor20"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/cruzamentos/10
+        name: Delete
+        meta:
+          id: req_aa693f5fcef7485d8252b5c3608d4c55
+          created: 1742257748722
+          modified: 1742257783404
+          isPrivate: false
+          sortKey: -1742256242304
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: Insomnia/2023.5.7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/cruzamentos
+        name: Read
+        meta:
+          id: req_aa2fe7419cf34471bd2b069fa6312a96
+          created: 1742299627071
+          modified: 1742299643493
+          isPrivate: false
+          sortKey: -1742256242354
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/cruzamentos/10
+        name: Update
+        meta:
+          id: req_716f6642e26a4c6f8e582001a9cf4c3a
+          created: 1742299714765
+          modified: 1742299828754
+          isPrivate: false
+          sortKey: -1742256242329
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": "10",
+            	"nome": "Cruzamento J",
+            	"localizacao": "Avenida Brigadeiro Luis Antonio x Rua da Consolação, São Paulo - SP",
+            	"vias": 4,
+            	"estadoSemaforo": "verde",
+            	"nroVeiculosDetectados": 60,
+            	"dataCadastro": "2025-03-10T09:30:00",
+            	"horaUltimaAtualizacao": "2025-03-10T10:30:00",
+            	"sensores": "Sensor19, Sensor20"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_93becfa519ed4f0593ba54b2b652dc45
+    created: 1742249949555
+    modified: 1742249949555
+environments:
+  name: Base Environment
+  meta:
+    id: env_0c177abcf691475c8a2a9f36259dcbb4
+    created: 1742249949552
+    modified: 1742249949552
+    isPrivate: false

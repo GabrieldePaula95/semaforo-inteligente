@@ -21,6 +21,11 @@ public class AlertaController {
         return alertaService.criarAlerta(alerta.getMessage());
     }
 
+    @PutMapping("/{id}")
+    public Alerta atualizarAlerta(@PathVariable String id, @RequestBody Alerta alerta) {
+        return alertaService.atualizarAlerta(id, alerta);
+    }
+
     // Buscar todos os alertas
     @GetMapping
     public List<Alerta> listarAlertas() {
